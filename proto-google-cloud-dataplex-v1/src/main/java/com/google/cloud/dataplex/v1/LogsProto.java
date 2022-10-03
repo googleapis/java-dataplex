@@ -118,21 +118,24 @@ public final class LogsProto {
           + "\002\"U\n\005State\022\025\n\021STATE_UNSPECIFIED\020\000\022\r\n\tSUC"
           + "CEEDED\020\001\022\n\n\006FAILED\020\002\022\r\n\tCANCELLED\020\003\022\013\n\007A"
           + "BORTED\020\004\"0\n\007Service\022\027\n\023SERVICE_UNSPECIFI"
-          + "ED\020\000\022\014\n\010DATAPROC\020\001\"\302\004\n\014SessionEvent\022\017\n\007m"
+          + "ED\020\000\022\014\n\010DATAPROC\020\001\"\272\005\n\014SessionEvent\022\017\n\007m"
           + "essage\030\001 \001(\t\022\017\n\007user_id\030\002 \001(\t\022\022\n\nsession"
           + "_id\030\003 \001(\t\022>\n\004type\030\004 \001(\01620.google.cloud.d"
           + "ataplex.v1.SessionEvent.EventType\022C\n\005que"
           + "ry\030\005 \001(\01322.google.cloud.dataplex.v1.Sess"
-          + "ionEvent.QueryDetailH\000\032\243\002\n\013QueryDetail\022\020"
-          + "\n\010query_id\030\001 \001(\t\022\022\n\nquery_text\030\002 \001(\t\022I\n\006"
-          + "engine\030\003 \001(\01629.google.cloud.dataplex.v1."
-          + "SessionEvent.QueryDetail.Engine\022+\n\010durat"
-          + "ion\030\004 \001(\0132\031.google.protobuf.Duration\022\031\n\021"
-          + "result_size_bytes\030\005 \001(\003\022\034\n\024data_processe"
-          + "d_bytes\030\006 \001(\003\"=\n\006Engine\022\026\n\022ENGINE_UNSPEC"
-          + "IFIED\020\000\022\r\n\tSPARK_SQL\020\001\022\014\n\010BIGQUERY\020\002\"G\n\t"
-          + "EventType\022\032\n\026EVENT_TYPE_UNSPECIFIED\020\000\022\t\n"
-          + "\005START\020\001\022\010\n\004STOP\020\002\022\t\n\005QUERY\020\003B\010\n\006detailB"
+          + "ionEvent.QueryDetailH\000\022\027\n\017event_succeede"
+          + "d\030\006 \001(\010\022\031\n\021warm_pool_enabled\030\007 \001(\010\0226\n\023un"
+          + "assigned_duration\030\010 \001(\0132\031.google.protobu"
+          + "f.Duration\032\243\002\n\013QueryDetail\022\020\n\010query_id\030\001"
+          + " \001(\t\022\022\n\nquery_text\030\002 \001(\t\022I\n\006engine\030\003 \001(\016"
+          + "29.google.cloud.dataplex.v1.SessionEvent"
+          + ".QueryDetail.Engine\022+\n\010duration\030\004 \001(\0132\031."
+          + "google.protobuf.Duration\022\031\n\021result_size_"
+          + "bytes\030\005 \001(\003\022\034\n\024data_processed_bytes\030\006 \001("
+          + "\003\"=\n\006Engine\022\026\n\022ENGINE_UNSPECIFIED\020\000\022\r\n\tS"
+          + "PARK_SQL\020\001\022\014\n\010BIGQUERY\020\002\"S\n\tEventType\022\032\n"
+          + "\026EVENT_TYPE_UNSPECIFIED\020\000\022\t\n\005START\020\001\022\010\n\004"
+          + "STOP\020\002\022\t\n\005QUERY\020\003\022\n\n\006CREATE\020\004B\010\n\006detailB"
           + "m\n\034com.google.cloud.dataplex.v1B\tLogsPro"
           + "toP\001Z@google.golang.org/genproto/googlea"
           + "pis/cloud/dataplex/v1;dataplexb\006proto3"
@@ -226,7 +229,15 @@ public final class LogsProto {
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_google_cloud_dataplex_v1_SessionEvent_descriptor,
             new java.lang.String[] {
-              "Message", "UserId", "SessionId", "Type", "Query", "Detail",
+              "Message",
+              "UserId",
+              "SessionId",
+              "Type",
+              "Query",
+              "EventSucceeded",
+              "WarmPoolEnabled",
+              "UnassignedDuration",
+              "Detail",
             });
     internal_static_google_cloud_dataplex_v1_SessionEvent_QueryDetail_descriptor =
         internal_static_google_cloud_dataplex_v1_SessionEvent_descriptor.getNestedTypes().get(0);
