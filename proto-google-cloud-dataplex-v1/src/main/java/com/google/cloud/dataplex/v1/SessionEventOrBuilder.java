@@ -177,14 +177,15 @@ public interface SessionEventOrBuilder
    *
    *
    * <pre>
-   * If the session is a warm pooled session.
+   * If the session is associated with an Environment with fast startup enabled,
+   * and was pre-created before being assigned to a user.
    * </pre>
    *
-   * <code>bool warm_pool_enabled = 7;</code>
+   * <code>bool fast_startup_enabled = 7;</code>
    *
-   * @return The warmPoolEnabled.
+   * @return The fastStartupEnabled.
    */
-  boolean getWarmPoolEnabled();
+  boolean getFastStartupEnabled();
 
   /**
    *

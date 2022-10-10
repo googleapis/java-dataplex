@@ -2253,22 +2253,23 @@ public final class SessionEvent extends com.google.protobuf.GeneratedMessageV3
     return eventSucceeded_;
   }
 
-  public static final int WARM_POOL_ENABLED_FIELD_NUMBER = 7;
-  private boolean warmPoolEnabled_;
+  public static final int FAST_STARTUP_ENABLED_FIELD_NUMBER = 7;
+  private boolean fastStartupEnabled_;
   /**
    *
    *
    * <pre>
-   * If the session is a warm pooled session.
+   * If the session is associated with an Environment with fast startup enabled,
+   * and was pre-created before being assigned to a user.
    * </pre>
    *
-   * <code>bool warm_pool_enabled = 7;</code>
+   * <code>bool fast_startup_enabled = 7;</code>
    *
-   * @return The warmPoolEnabled.
+   * @return The fastStartupEnabled.
    */
   @java.lang.Override
-  public boolean getWarmPoolEnabled() {
-    return warmPoolEnabled_;
+  public boolean getFastStartupEnabled() {
+    return fastStartupEnabled_;
   }
 
   public static final int UNASSIGNED_DURATION_FIELD_NUMBER = 8;
@@ -2352,8 +2353,8 @@ public final class SessionEvent extends com.google.protobuf.GeneratedMessageV3
     if (eventSucceeded_ != false) {
       output.writeBool(6, eventSucceeded_);
     }
-    if (warmPoolEnabled_ != false) {
-      output.writeBool(7, warmPoolEnabled_);
+    if (fastStartupEnabled_ != false) {
+      output.writeBool(7, fastStartupEnabled_);
     }
     if (unassignedDuration_ != null) {
       output.writeMessage(8, getUnassignedDuration());
@@ -2388,8 +2389,8 @@ public final class SessionEvent extends com.google.protobuf.GeneratedMessageV3
     if (eventSucceeded_ != false) {
       size += com.google.protobuf.CodedOutputStream.computeBoolSize(6, eventSucceeded_);
     }
-    if (warmPoolEnabled_ != false) {
-      size += com.google.protobuf.CodedOutputStream.computeBoolSize(7, warmPoolEnabled_);
+    if (fastStartupEnabled_ != false) {
+      size += com.google.protobuf.CodedOutputStream.computeBoolSize(7, fastStartupEnabled_);
     }
     if (unassignedDuration_ != null) {
       size += com.google.protobuf.CodedOutputStream.computeMessageSize(8, getUnassignedDuration());
@@ -2415,7 +2416,7 @@ public final class SessionEvent extends com.google.protobuf.GeneratedMessageV3
     if (!getSessionId().equals(other.getSessionId())) return false;
     if (type_ != other.type_) return false;
     if (getEventSucceeded() != other.getEventSucceeded()) return false;
-    if (getWarmPoolEnabled() != other.getWarmPoolEnabled()) return false;
+    if (getFastStartupEnabled() != other.getFastStartupEnabled()) return false;
     if (hasUnassignedDuration() != other.hasUnassignedDuration()) return false;
     if (hasUnassignedDuration()) {
       if (!getUnassignedDuration().equals(other.getUnassignedDuration())) return false;
@@ -2449,8 +2450,8 @@ public final class SessionEvent extends com.google.protobuf.GeneratedMessageV3
     hash = (53 * hash) + type_;
     hash = (37 * hash) + EVENT_SUCCEEDED_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getEventSucceeded());
-    hash = (37 * hash) + WARM_POOL_ENABLED_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getWarmPoolEnabled());
+    hash = (37 * hash) + FAST_STARTUP_ENABLED_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getFastStartupEnabled());
     if (hasUnassignedDuration()) {
       hash = (37 * hash) + UNASSIGNED_DURATION_FIELD_NUMBER;
       hash = (53 * hash) + getUnassignedDuration().hashCode();
@@ -2615,7 +2616,7 @@ public final class SessionEvent extends com.google.protobuf.GeneratedMessageV3
       }
       eventSucceeded_ = false;
 
-      warmPoolEnabled_ = false;
+      fastStartupEnabled_ = false;
 
       if (unassignedDurationBuilder_ == null) {
         unassignedDuration_ = null;
@@ -2664,7 +2665,7 @@ public final class SessionEvent extends com.google.protobuf.GeneratedMessageV3
         }
       }
       result.eventSucceeded_ = eventSucceeded_;
-      result.warmPoolEnabled_ = warmPoolEnabled_;
+      result.fastStartupEnabled_ = fastStartupEnabled_;
       if (unassignedDurationBuilder_ == null) {
         result.unassignedDuration_ = unassignedDuration_;
       } else {
@@ -2738,8 +2739,8 @@ public final class SessionEvent extends com.google.protobuf.GeneratedMessageV3
       if (other.getEventSucceeded() != false) {
         setEventSucceeded(other.getEventSucceeded());
       }
-      if (other.getWarmPoolEnabled() != false) {
-        setWarmPoolEnabled(other.getWarmPoolEnabled());
+      if (other.getFastStartupEnabled() != false) {
+        setFastStartupEnabled(other.getFastStartupEnabled());
       }
       if (other.hasUnassignedDuration()) {
         mergeUnassignedDuration(other.getUnassignedDuration());
@@ -2819,7 +2820,7 @@ public final class SessionEvent extends com.google.protobuf.GeneratedMessageV3
               } // case 48
             case 56:
               {
-                warmPoolEnabled_ = input.readBool();
+                fastStartupEnabled_ = input.readBool();
 
                 break;
               } // case 56
@@ -3540,37 +3541,39 @@ public final class SessionEvent extends com.google.protobuf.GeneratedMessageV3
       return this;
     }
 
-    private boolean warmPoolEnabled_;
+    private boolean fastStartupEnabled_;
     /**
      *
      *
      * <pre>
-     * If the session is a warm pooled session.
+     * If the session is associated with an Environment with fast startup enabled,
+     * and was pre-created before being assigned to a user.
      * </pre>
      *
-     * <code>bool warm_pool_enabled = 7;</code>
+     * <code>bool fast_startup_enabled = 7;</code>
      *
-     * @return The warmPoolEnabled.
+     * @return The fastStartupEnabled.
      */
     @java.lang.Override
-    public boolean getWarmPoolEnabled() {
-      return warmPoolEnabled_;
+    public boolean getFastStartupEnabled() {
+      return fastStartupEnabled_;
     }
     /**
      *
      *
      * <pre>
-     * If the session is a warm pooled session.
+     * If the session is associated with an Environment with fast startup enabled,
+     * and was pre-created before being assigned to a user.
      * </pre>
      *
-     * <code>bool warm_pool_enabled = 7;</code>
+     * <code>bool fast_startup_enabled = 7;</code>
      *
-     * @param value The warmPoolEnabled to set.
+     * @param value The fastStartupEnabled to set.
      * @return This builder for chaining.
      */
-    public Builder setWarmPoolEnabled(boolean value) {
+    public Builder setFastStartupEnabled(boolean value) {
 
-      warmPoolEnabled_ = value;
+      fastStartupEnabled_ = value;
       onChanged();
       return this;
     }
@@ -3578,16 +3581,17 @@ public final class SessionEvent extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * If the session is a warm pooled session.
+     * If the session is associated with an Environment with fast startup enabled,
+     * and was pre-created before being assigned to a user.
      * </pre>
      *
-     * <code>bool warm_pool_enabled = 7;</code>
+     * <code>bool fast_startup_enabled = 7;</code>
      *
      * @return This builder for chaining.
      */
-    public Builder clearWarmPoolEnabled() {
+    public Builder clearFastStartupEnabled() {
 
-      warmPoolEnabled_ = false;
+      fastStartupEnabled_ = false;
       onChanged();
       return this;
     }
