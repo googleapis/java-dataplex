@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/googleapis/java-dataplex/compare/v1.1.3...v1.2.0) (2023-03-23)
+
+
+### Features
+
+* Add support for notebook tasks ([6dc8fec](https://github.com/googleapis/java-dataplex/commit/6dc8fec582234e12e460d208f70191d1ce3dbbef))
+
 ## [1.1.3](https://github.com/googleapis/java-dataplex/compare/v1.1.2...v1.1.3) (2022-10-03)
 
 
